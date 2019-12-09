@@ -105,7 +105,7 @@ def generateFrame():
     df = pd.DataFrame(rec) 
     df = df.sort_values(by=['Shape','Num','Time'])
     
-    mdData = (csv2md(df.to_csv()))
+    mdData = (csv2md(df.to_csv(index=False)))
     print(mdData)
 
 
@@ -132,10 +132,10 @@ def csv2md(csvData):
 
 
 if __name__ == '__main__':
-    # getData()
+    getData()
     # n = 4
 
-    # testData('Square_GAmp_4_5Pow')
+    testData('Square_GAmp_4_5Pow')
     # tobetest = ['Square_UAmp_4_5Pow','ULA_UAmp_2_5Pow','ULA_UAmp_3_5Pow','ULA_UAmp_4_5Pow']
     # ts = [1,3,5]
     # for fn in tobetest:
